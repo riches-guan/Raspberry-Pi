@@ -1,0 +1,39 @@
+
+<script type="text/x-red" data-template-name="Raspberry Pi">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> 名称</label>
+        <input type="text" id="node-input-name" placeholder="名称">
+    </div>
+    <div class="form-tips">使用引脚11、13和15。<br/>
+    有关各种输入选项和限制，请参阅信息面板。</div>
+</script>
+
+<script type="text/x-red" data-help-name="Raspberry Pi">
+    <p>PiBorg LedBorg LED输出节点。 需要一个<code>msg.payload</code>，其中包含一个三位数的rgb三元组，从<b>000</b>到<b>222</b>。</p>
+    <p>请参见<i><a href=“http://www.piborg.com/ledborg/install“target=”_new“>有关更多信息，请访问PiBorg网站</a></i>。</p>
+    <p>您还可以使用标准十六进制格式“#rrggbb”的<code>msg.appay</code>。</p>
+    <p>您可以使用@cheerlight颜色名称-红色、绿色、蓝色、青色、品红色、黄色、橙色、粉色、紫色、白色、旧蕾丝（暖白色），以及琥珀色和黑色（关闭）。</p>
+    <p>您还可以提供逗号分隔的rrr、ggg、bbb，其中每个值都可以在0到255之间。</p>
+    <p>每个流只能使用一个LEDborg节点。。。但你可以给它连接多个东西。</p>
+    <p><b>注意</b>：此节点使用物理引脚11、13和15。当此节点正在使用时，这些不能用于其他任何用途。</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('Raspberry Pi',{
+        category: '外部设备',
+        color:"#c6dbef",
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "light.png",
+        align: "left",
+        label: function() {
+            return this.name||"Raspberry Pi";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>

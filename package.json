@@ -6,7 +6,7 @@
     },
     "repository" : {
         "type":"git",
-        "url":"https://github.com/node-red/node-red-nodes.git",
+        "url":"https://github.com/riches-guan/Raspberry-Pi.git",
         "directory" : "tree/master/hardware/ledborg"
     },
     "license": "Apache-2.0",
@@ -17,8 +17,8 @@
         }
     },
     "author": {
-        "name": "Dave Conway-Jones",
-        "email": "ceejay@vnet.ibm.com",
-        "url": "http://nodered.org"
+        "name": "rehua",
+        "email": "rehua7686@gmail.com",
+        "url": "http://www.icccontrol.top"
     }
 }
